@@ -7,7 +7,7 @@ interface NewsItem {
   featuredImageUrl: string | null;
   featuredImageAlt: string | null;
   tag: string | null;
-  link: string; // Link is now mandatory and always a string
+  link: string | null; // Changed to match reality - can be null on Vercel
 }
 
 interface NewsProps {
@@ -15,7 +15,10 @@ interface NewsProps {
   fetchError: string | null;
 }
 
+console.log("News component loaded");
+
 export default function News({ news, fetchError }: NewsProps) {
+  console.log("Rendering News component with data:", news);
   return (
     <section className="py-16 px-4 md:px-8 bg-gt-dark-blue text-gt-text-light">
       <div className="mx-auto max-w-7xl">
@@ -53,16 +56,24 @@ export default function News({ news, fetchError }: NewsProps) {
                   <h4 className="card-title text-xl font-semibold text-gt-text-dark mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-gray-700 text-sm mb-3">{item.excerpt}</p>
+                  <p className="text-primary-content text-sm mb-3">
+                    {item.excerpt}
+                  </p>
                   <div className="card-actions justify-end mt-4">
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-sm btn-outline btn-primary rounded-full"
-                    >
-                      Read More
-                    </a>
+                    {item.link && item.link.trim() ? (
+                      <a
+                        href={item.link.trim()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-sm  btn-primary rounded-full"
+                      >
+                        Read More
+                      </a>
+                    ) : (
+                      <span className="btn btn-sm btn-outline btn-disabled rounded-full opacity-50 cursor-not-allowed">
+                        Read More
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>

@@ -17,7 +17,7 @@ export default function MobileNav() {
 
   return (
     <>
-      <nav className="fixed bottom-0 inset-x-0 bg-neutral text-neutral-content h-16 flex items-center justify-around shadow-lg z-50 lg:hidden">
+      <nav className="fixed bottom-0 inset-x-0 bg-primary text-neutral-content h-16 flex items-center justify-around shadow-lg z-50 lg:hidden">
         <button
           className="flex flex-col items-center btn btn-ghost h-full rounded-none"
           onClick={toggleMenu}

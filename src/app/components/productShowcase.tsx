@@ -34,9 +34,9 @@ export default function ProductShowcase({
               <a
                 href={item.link || "#"}
                 key={item.id}
-                className="block group card w-full bg-base-100 shadow-xl image-full rounded-box overflow-hidden transform transition-transform duration-300 hover:scale-[1.02]"
+                className="block group card w-full bg-base-100 shadow-lg image-full rounded-box overflow-hidden transform transition-transform duration-300 hover:scale-[1.02]"
               >
-                <figure className="relative w-full h-48">
+                <figure className="relative brightness-90 w-full h-48">
                   <Image
                     src={
                       item.showcaseImageUrl ||
@@ -44,7 +44,7 @@ export default function ProductShowcase({
                     }
                     alt={item.showcaseImageAlt || item.name}
                     fill
-                    className="object-cover transition-opacity duration-300 group-hover:opacity-0 rounded-t-box"
+                    className="object-cover [filter:brightness(60%)!important] brightness-90 duration-300 group-hover:opacity-0 rounded-t-box"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority={false}
                   />
@@ -55,10 +55,11 @@ export default function ProductShowcase({
                     }
                     alt={item.hoverImageAlt || item.name + " hover"}
                     fill
-                    className="object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-t-box"
+                    className="object-cover [filter:brightness(50%)!important] brightness-90 opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-t-box"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority={false}
                   />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-0 transition-opacity duration-300 rounded-t-box"></div>
                 </figure>
                 <div className="card-body p-4 justify-center items-center text-center">
                   <h4 className="card-title text-lg font-semibold text-gt-text-light group-hover:text-gt-green transition-colors duration-300">
