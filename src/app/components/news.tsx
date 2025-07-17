@@ -4,9 +4,10 @@ interface NewsItem {
   id: string;
   title: string;
   excerpt: string;
-  slug: string;
   featuredImageUrl: string | null;
   featuredImageAlt: string | null;
+  tag: string | null;
+  link: string; // Link is now mandatory and always a string
 }
 
 interface NewsProps {
@@ -44,14 +45,24 @@ export default function News({ news, fetchError }: NewsProps) {
                   </figure>
                 )}
                 <div className="card-body p-6">
+                  {item.tag && (
+                    <span className="badge badge-outline badge-primary text-xs font-semibold mb-2">
+                      {item.tag}
+                    </span>
+                  )}
                   <h4 className="card-title text-xl font-semibold text-gt-text-dark mb-2">
                     {item.title}
                   </h4>
                   <p className="text-gray-700 text-sm mb-3">{item.excerpt}</p>
                   <div className="card-actions justify-end mt-4">
-                    <button className="btn btn-sm btn-outline btn-primary rounded-full">
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-sm btn-outline btn-primary rounded-full"
+                    >
                       Read More
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
