@@ -91,7 +91,7 @@ First you'll be able to see images of the page before the revamp.
 <img width="1911" height="1005" alt="before6" src="https://github.com/user-attachments/assets/c8c13e01-63c1-482e-aab7-9118833ec95a" />
 
 ### After
-<img width="1918" height="1079" alt="after1" src="https://github.com/user-attachments/assets/ce05eb20-a9be-4c1f-b927-6f1890a50ad4" />
+<img width="1917" height="1079" alt="after1" src="https://github.com/user-attachments/assets/7e7e1747-619f-4ee3-bd72-5ef3f0878094" />
 <img width="1918" height="1077" alt="after2" src="https://github.com/user-attachments/assets/8722023b-b38c-4c89-8387-6b1e28153341" />
 <img width="1920" height="1079" alt="after3" src="https://github.com/user-attachments/assets/4eec66c7-33f8-4e50-80e0-7b749d8eaaf6" />
 <img width="1920" height="1077" alt="after4" src="https://github.com/user-attachments/assets/6fc71d3f-4847-4460-8259-c47984d04957" />
