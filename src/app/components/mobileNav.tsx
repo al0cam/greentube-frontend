@@ -1,9 +1,8 @@
-// components/MobileNav.tsx
 "use client";
 
 import { useState } from "react";
 import Link from "next/link";
-import MobileMenu from "./mobileMenu"; // Import the MobileMenu component
+import MobileMenu from "./mobileMenu";
 
 export default function MobileNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

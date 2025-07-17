@@ -1,5 +1,3 @@
-// components/News.tsx
-// This can be a Server Component.
 import Image from "next/image";
 
 interface NewsItem {

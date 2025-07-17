@@ -6,23 +6,17 @@ import Partners from "./components/partners";
 import ProductShowcase from "./components/productShowcase";
 import { fetcherService } from "./services/fetcherService";
 
-// --- Main Page Component ---
 export default async function HomePage() {
   let news = [];
   let productShowcaseItems = [];
   let partners = [];
   let fetchError = null;
 
-  // --- Hero Section Data (Placeholder for now) ---
   const heroData = {
     headline: "NOVOMATIC Digital Gaming and Entertainment division",
     subtitle:
       "Greentube is a leading developer and supplier of iGaming solutions.",
   };
-  // --- End Hero Section Data ---
-
-  // --- Placeholder for Partners Data ---
-  // --- End Placeholder for Partners Data ---
 
   try {
     news = await fetcherService.getNews();

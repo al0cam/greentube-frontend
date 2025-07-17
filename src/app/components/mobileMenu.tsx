@@ -1,9 +1,8 @@
-// components/MobileMenu.tsx
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
-import MenuTree, { menuData } from "./menuTree"; // Import MenuTree and menuData
+import MenuTree, { menuData } from "./menuTree";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -14,7 +13,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   return (
     <div
       className={`fixed inset-0 bg-neutral transform transition-transform duration-300 z-50 ${isOpen ? "translate-x-0" : "translate-x-full"
-        } lg:hidden`} // Hidden on large screens
+        } lg:hidden`}
     >
       <div className="flex flex-col h-full p-4">
         <div className="flex justify-between items-center py-4 border-b border-gray-700 mb-8">
@@ -40,7 +39,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <title>Close Menu</title> {/* Updated title for clarity */}
+              <title>Close Menu</title>
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -51,7 +50,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </button>
         </div>
 
-        {/* Menu Items using MenuTree */}
         <nav className=" overflow-y-auto">
           <MenuTree
             menuItems={menuData}
@@ -60,10 +58,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           />
         </nav>
 
-        {/* Social Media Icons at the bottom */}
         <div className="py-4 border-t border-gray-700 mt-auto">
           <div className="grid grid-flow-col gap-12 justify-center">
-            {/* Social Media Icons (replace with actual SVGs or Font Awesome if available) */}
             <a
               href="https://www.facebook.com/Greentube"
               target="_blank"

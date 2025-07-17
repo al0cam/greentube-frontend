@@ -1,6 +1,3 @@
-// components/About.tsx
-// This can be a Server Component as it doesn't have client-side interactivity or state.
-
 export default function About() {
   return (
     <section className="py-16 px-4 md:px-8 bg-gt-light-gray text-gt-text-dark text-center">

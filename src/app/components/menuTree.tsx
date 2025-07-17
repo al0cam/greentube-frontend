@@ -1,8 +1,7 @@
-// components/MenuTree.tsx
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react"; // Import useMemo
+import { useMemo, useState } from "react";
 
 interface MenuItem {
   id: string;
@@ -16,7 +15,7 @@ interface MenuTreeProps {
   menuItems: MenuItem[];
   isMobile?: boolean;
   onLinkClick?: () => void;
-  level?: number; // Track nesting level
+  level?: number;
 }
 
 export default function MenuTree({
@@ -37,11 +36,9 @@ export default function MenuTree({
     setOpenItems(newOpenItems);
   };
 
-  // Helper function to create menu items with main link as first child
   const processMenuItems = (items: MenuItem[]): MenuItem[] => {
     return items.map((item) => {
       if (item.children && item.children.length > 0 && item.href) {
-        // If item has both children and href, add the main link as first child
         const mainLinkItem: MenuItem = {
           id: `${item.id}-main`,
           label: `${item.label} - Main Page`,
@@ -50,12 +47,11 @@ export default function MenuTree({
 
         return {
           ...item,
-          href: undefined, // Remove href from parent since it's now a child
+          href: undefined,
           children: [mainLinkItem, ...item.children],
         };
       }
 
-      // If item has children, process them recursively
       if (item.children && item.children.length > 0) {
         return {
           ...item,
@@ -67,7 +63,6 @@ export default function MenuTree({
     });
   };
 
-  // Use useMemo to ensure processedMenuItems is only computed when menuItems changes
   const processedMenuItems = useMemo(
     () => processMenuItems(menuItems),
     [menuItems],
@@ -85,7 +80,6 @@ export default function MenuTree({
           {item.isDivider ? (
             <div className="border-t border-gray-300 my-2" />
           ) : item.children && item.children.length > 0 ? (
-            // Menu item with children
             <div className="relative">
               <div
                 className={`
@@ -140,7 +134,6 @@ export default function MenuTree({
               )}
             </div>
           ) : (
-            // Simple menu item
             <Link
               href={item.href || "#"}
               className={`
@@ -166,7 +159,6 @@ export default function MenuTree({
   );
 }
 
-// Your existing menuData
 const menuData: MenuItem[] = [
   {
     id: "products-services",

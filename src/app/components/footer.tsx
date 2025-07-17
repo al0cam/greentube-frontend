@@ -7,10 +7,8 @@ export default function Footer() {
 
   return (
     <footer className="footer p-10 pb-20 bg-neutral text-neutral-content flex flex-col items-center text-center">
-      {/* Footer Navigation Links - Reverted to simpler set with updated links */}
       <div className="w-full max-w-7xl grid grid-flow-col gap-4 justify-center mb-8">
         {" "}
-        {/* Adjusted grid for simpler links */}
         <Link
           href="https://www.greentube.com/about-us/"
           className="link link-hover"
@@ -29,7 +27,6 @@ export default function Footer() {
         >
           Jobs
         </Link>
-        {/* Replaced "Press kit" with "Games" and added the appropriate link */}
         <Link
           href="https://www.greentube.com/all-games/"
           className="link link-hover"
@@ -38,7 +35,6 @@ export default function Footer() {
         </Link>
       </div>
 
-      {/* Social Media Icons */}
       <div className="py-4 border-t border-gray-700 w-full max-w-7xl mt-auto">
         <div className="grid grid-flow-col gap-8 justify-center mb-4">
           <a
@@ -112,7 +108,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Copyright and Regulatory Info */}
       <div className="w-full max-w-7xl text-center mt-4 text-sm">
         <p className="font-bold mb-2">
           © {currentYear} Copyright Greentube GmbH
@@ -120,7 +115,6 @@ export default function Footer() {
         <p className="mb-2">Wiedner Hauptstrasse 94 | A-1050 Vienna</p>
         <div className="text-xs max-w-md mx-auto">
           {" "}
-          {/* Added mx-auto for centering */}
           <p className="mb-2">
             Greentube GmbH holds a Remote Gambling Software licence and is
             regulated in Great Britain by the Gambling Commission under account
@@ -137,7 +131,6 @@ export default function Footer() {
           </p>
           <p className="mb-2">
             {" "}
-            {/* Added mb-2 for spacing */}
             Greentube GmbH is regulated by the Malta Gaming Authority and
             licensed to offer Type 1 Gaming Services as a corporate entity under
             authorization number{" "}
@@ -151,7 +144,6 @@ export default function Footer() {
             </a>{" "}
             dated 1st March 2023.
           </p>
-          {/* Clarification about design and content */}
           <p className="mt-4 text-gray-400">
             Please note: This website is a design recreation. The design is my (
             <a
