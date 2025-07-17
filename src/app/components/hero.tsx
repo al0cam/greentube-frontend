@@ -27,9 +27,14 @@ export default function Hero({ headline, subtitle }: HeroProps) {
         <p className="text-lg md:text-2xl mb-8 max-w-3xl drop-shadow-md">
           {subtitle}
         </p>
-        <button className="btn btn-primary btn-lg rounded-full shadow-xl hover:scale-105 transition-transform duration-300">
+        <a
+          href="https://www.greentube.com/all-games/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary btn-lg rounded-full shadow-xl hover:scale-105 transition-transform duration-300"
+        >
           DISCOVER MORE
-        </button>
+        </a>
       </div>
     </section>
   );
