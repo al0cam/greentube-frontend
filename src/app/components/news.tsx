@@ -6,7 +6,6 @@ interface NewsItem {
   id: string;
   title: string;
   excerpt: string;
-  publishDate: string;
   slug: string;
   featuredImageUrl: string | null;
   featuredImageAlt: string | null;
@@ -51,9 +50,6 @@ export default function News({ news, fetchError }: NewsProps) {
                     {item.title}
                   </h4>
                   <p className="text-gray-700 text-sm mb-3">{item.excerpt}</p>
-                  <p className="text-gray-500 text-xs">
-                    {new Date(item.publishDate).toLocaleDateString()}
-                  </p>
                   <div className="card-actions justify-end mt-4">
                     <button className="btn btn-sm btn-outline btn-primary rounded-full">
                       Read More

@@ -1,41 +1,25 @@
-// components/Hero.tsx
-// This will be a Client Component due to the iframe for the video background.
 "use client";
 
 interface HeroProps {
   headline: string;
   subtitle: string;
-  backgroundVideoEmbedUrl: string;
-  fallbackImageUrl: string;
 }
 
-export default function Hero({
-  headline,
-  subtitle,
-  backgroundVideoEmbedUrl,
-  fallbackImageUrl,
-}: HeroProps) {
+export default function Hero({ headline, subtitle }: HeroProps) {
   return (
     <section className="relative w-full h-screen overflow-hidden bg-black">
-      {/* Fallback image layer */}
-      <div
-        className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${fallbackImageUrl})` }}
+      <video
+        src="/videos/hero-bg.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        poster="/images/hero-fallback.webp"
       />
 
-      {/* Vimeo iframe layer */}
-      <iframe
-        src={backgroundVideoEmbedUrl}
-        className="absolute top-0 left-0 w-full h-full pointer-events-none scale-[1.2]"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowFullScreen
-        title="Greentube Background Video"
-      />
+      <div className="absolute inset-0 bg-black opacity-50" />
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-
-      {/* Text content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-gt-text-light px-4">
         <h2 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg leading-tight">
           {headline}
@@ -50,4 +34,3 @@ export default function Hero({
     </section>
   );
 }
-
