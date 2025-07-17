@@ -17,9 +17,15 @@ export default function About() {
           Gaming and Entertainment division, we provide solutions that go above
           and beyond and shape the future of this ever-changing sector.
         </p>
-        <button className="btn btn-secondary mt-8 rounded-full shadow-md hover:scale-105 transition-transform duration-300">
+
+        <a
+          href="https://www.greentube.com/about-us/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-secondary mt-8 rounded-full shadow-md hover:scale-105 transition-transform duration-300"
+        >
           READ MORE
-        </button>
+        </a>
       </div>
     </section>
   );
