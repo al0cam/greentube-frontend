@@ -1,4 +1,3 @@
-````markdown
 # Greentube Homepage Frontend
 
 This repository contains the frontend application for the Greentube Homepage, built with React and designed to consume data from the Greentube API.
@@ -33,7 +32,6 @@ Follow these steps to get the frontend application up and running on your local 
    ```bash
    git clone https://github.com/al0cam/greentube_frontend.git
    cd greentube_frontend
-````
 
 2. Install dependencies:
 
